@@ -8,6 +8,7 @@
 
 <ion-content [fullscreen]="true">
   <ion-img [src]="image"></ion-img>
+  <ion-button expand="full" (click)="captureImage()">Capture Image</ion-button>
   <ion-button
     expand="full"
     (click)="recognizeImage()"
