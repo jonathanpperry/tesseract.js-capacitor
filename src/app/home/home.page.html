@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Blank </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -19,12 +17,20 @@
 
   <ion-card *ngIf="workerReady && captureProgress > 0">
     <ion-card-header>
-      <ion-card-title>
-        Capture progress: {{captureProgress}}%
-      </ion-card-title>
+      <ion-card-title> Capture progress: {{captureProgress}}% </ion-card-title>
     </ion-card-header>
-    <ion-card-content>
-      {{ocrResult}}
-    </ion-card-content>
+    <ion-card-content> {{ocrResult}} </ion-card-content>
   </ion-card>
+
+  <ion-button expand="full" (click)="setUser()">Set User ID</ion-button>
+  <ion-button expand="full" (click)="setProperty()"
+    >Set User Property</ion-button
+  >
+  <ion-button expand="full" (click)="logEvent()">Log Event</ion-button>
+  <ion-button expand="full" routerLink="/second">Go to second page</ion-button>
+  <ion-button expand="full" (click)="toggleDataCollection()"
+    >Toggle Data collection</ion-button
+  >
+
+  Analytics enabled: {{ enabled }}
 </ion-content>
